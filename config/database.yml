@@ -1,0 +1,17 @@
+development: &postgres
+  adapter: postgresql
+  timeout: 5000
+  encoding: utf8
+  reconnect: false
+  database: login_and_payment
+  pool: 25
+  username: chris
+  password: root
+  host: localhost
+  port: 5432
+
+production:
+  <<: *postgres
+
+staging:
+  <<: *postgres
